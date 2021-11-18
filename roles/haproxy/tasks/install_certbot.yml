@@ -3,3 +3,6 @@
   apt:
     package: certbot
     state: present
+- name: Request for SSL certificate
+  command:  certbot certonly --standalone  --non-interactive --agree-tos --email dport2531@gmail.com --http-01-port=8888
+  
