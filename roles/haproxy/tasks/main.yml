@@ -1,4 +1,4 @@
 ---
 # tasks file for /etc/ansible/ansible_test/roles/haproxy
 - import_tasks: install.yml
-- import_task: service.yml
+- import_tasks: service.yml
