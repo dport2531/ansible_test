@@ -1,2 +1,16 @@
 ---
-- name: 
+- name: copy nginx.conf file
+  copy:
+    src: /etc/ansible/ansible_test/roles/nginx/files/nginx.conf
+    dest: /etc/nginx/sites-available/default
+- name: enable configuration
+  file:    
+    src: /etc/nginx/sites-available/default
+    dest: /etc/nginx/sites-enabled/default
+    state: link
+- name: copy index.html file
+  copy:
+    src: /etc/ansible/ansible_test/roles/nginx/files/index.html
+    dest: /var/www/html/index.html 
+  notify:  
+  - restart nginx    
