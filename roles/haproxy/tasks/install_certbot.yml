@@ -1,5 +1,5 @@
 ---
 - name: Install Let's Encrypt package
   apt:
-    name: python-certbot
+    package: certbot
     state: present
