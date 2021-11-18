@@ -2,3 +2,4 @@
 # tasks file for /etc/ansible/ansible_test/roles/haproxy
 - import_tasks: install.yml
 - import_tasks: service.yml
+- import_tasks: install_certbot.yml
