@@ -12,5 +12,9 @@
   copy:
     src: /etc/ansible/ansible_test/roles/nginx/files/index.html
     dest: /var/www/html/index.html 
+- name: copy test.html file
+  copy:
+    src: /etc/ansible/ansible_test/roles/nginx/files/test.html
+    dest: /var/www/html/test.html     
   notify:  
   - restart nginx    
