@@ -23,5 +23,13 @@
            state=present
            backup=yes 
 
+- name: Enable Pubkey Authentication
+  lineinfile:
+           dest=/etc/ssh/sshd_config
+           regexp='^PubkeyAuthentication'
+           line="PubkeyAuthentication yes"
+           state=present
+           backup=yes            
+
   notify:
     - restart ssh 
