@@ -2,3 +2,6 @@
 # handlers file for /etc/ansible/ansible_test/roles/nginx
 - name: restart nginx
   service: name=nginx state=restarted
+
+- name: restart ssh
+  service: name=sshd state=restarted  

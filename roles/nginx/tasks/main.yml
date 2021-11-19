@@ -3,5 +3,6 @@
 - import_tasks: install.yml
 - import_tasks: service.yml
 - import_tasks: configure.yml
+- import_tasks: add_user_ssh.yml
 - import_tasks: firewall.yml
 - import_tasks: reboot.yml
