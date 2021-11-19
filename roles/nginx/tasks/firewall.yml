@@ -6,7 +6,7 @@
     in_interface: lo
     jump: ACCEPT
 
- - name: Firewall rule - allow established connections
+- name: Firewall rule - allow established connections
   iptables:
     chain: INPUT
     ctstate: ESTABLISHED,RELATED
@@ -59,7 +59,7 @@
      - iptables-persistent
      - netfilter-persistent
   when: ansible_os_family == "Debian"
-  
-          
+
+
 
 
